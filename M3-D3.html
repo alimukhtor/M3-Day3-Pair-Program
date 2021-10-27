@@ -670,7 +670,7 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button"  class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button"  class="btn btn-sm btn-outline-secondary">Hide</button>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
@@ -700,6 +700,7 @@
 
           console.log(data.photos)
           const ali = data.photos.map( element => `  <div class="card mb-4 shadow-sm">
+          <div class="card mb-4 shadow-sm">
             <img src=${element.src.small}>
 
               <div class="card-body">
@@ -710,7 +711,7 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button"  class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button"  class="btn btn-sm btn-outline-secondary">Hide</button>
                   </div>
                   <small class="text-muted">9 mins</small>
                 </div>
