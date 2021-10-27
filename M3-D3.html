@@ -656,11 +656,11 @@
           return resp.json()
         })
         .then(data => {
-          const getRow = document.querySelector('.bd-placeholder-img');
+          const getRow = document.querySelector('.album .row');
           console.log(data.photos)
-          console.log(data.photos.map( element => `<img src=${element.src.medium}>`))
+          console.log(data.photos.map( element => `<img src=${element.src.small}>`))
           getRow.innerHTML =''
-          getRow.innerHTML += data.photos.map( element => `<img src=${element.src.medium}>
+          getRow.innerHTML += data.photos.map( element => `<img src=${element.src.small}>
             `)
 
 
@@ -682,9 +682,9 @@
           const getButton = document.querySelector('.btn');
 
           console.log(data.photos)
-          console.log(data.photos.map( element => `<img src=${element.src.medium}>`))
+          console.log(data.photos.map( element => `<img src=${element.src.small}>`))
           getRow.innerHTML = ''
-          getRow.innerHTML += data.photos.map( element => `<img src=${element.src.medium}>`)
+          getRow.innerHTML += data.photos.map( element => `<img src=${element.src.small}>`)
 
         })
       }
