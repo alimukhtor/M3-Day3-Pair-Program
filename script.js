@@ -54,19 +54,24 @@ const loadUser = () =>{
 
       getBody.innerHTML = allImage
       const getBtns = getBody.querySelectorAll(".hide-btn")
+      let counter1 = 0;
       for(let i = 0; i < getBtns.length; i++){
+        counter1 = i
         const currentBtn1 = getBtns[i]
         currentBtn1.onclick = function (event) {
           event.currentTarget.closest(".card").remove();
+          setTimeout(() => alert(counter1 + " Images are uploaded"), 3000);
 
         };
       }
       const getSelectedBtn = getBody.querySelectorAll(".btn-select")
+      let counter2 = 0;
       for(let i = 0; i < getSelectedBtn.length; i++){
+        counter2 = i
         const currentBtn2 = getSelectedBtn[i]
         currentBtn2.onclick = function (event) {
           event.currentTarget.closest(".card").classList.add("bg-secondary");
-
+          setTimeout(() => alert(counter2 + " Images are uploaded"), 3000);
         };
       }
     console.log(allImage);
@@ -111,23 +116,25 @@ const loadUser1 = () =>{
 
       getBody1.innerHTML = allImage
       const getBtns = getBody1.querySelectorAll(".hide-btn")
+      let counter3 = 0
       for(let i = 0; i < getBtns.length; i++){
-        const currentBtn1 = getBtns[i]
-        currentBtn1.onclick = function (event) {
+        counter3 = i;
+        getBtns[i].onclick = function (event) {
           event.currentTarget.closest(".card").remove();
           // setTimeout(() => alert('Hello'), 1000);
-          setTimeout(() => alert("World"), 3000);
+          setTimeout(() => alert(counter3 + " Images are uploaded"), 3000);
 
-          alert("Hello", 3000);
+
         };
       }
       const getSelectedBtn = getBody1.querySelectorAll(".btn-select")
+      let counter4 = 0
       for(let i = 0; i < getSelectedBtn.length; i++){
+        counter4 = i;
         const currentBtn2 = getSelectedBtn[i]
         currentBtn2.onclick = function (event) {
           event.currentTarget.closest(".card").classList.add("bg-secondary");
-            // setTimeout(function(){ alert("Hello") }, 5000);
-
+            setTimeout(() => alert(counter4 + " Images are uploaded"), 3000);
         };
       }
     console.log(allImage);
